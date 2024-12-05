@@ -9,12 +9,12 @@ body{
 }
 .left-side-bar{
     border: 1px solid rgb(209, 207, 207);   
-    background: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+    background: radial-gradient(circle, #f19afb 0%, #9ee5f3 100%);
     display: flex;
     flex-grow:1;
     flex-direction: column;
     height: 100vh;
-    color: rgb(9, 9, 9);
+    color: rgb(41, 41, 41);
 
 }
 .left-side-bar p{
@@ -26,12 +26,21 @@ body{
 .left-side-bar ul li{
     list-style-type: none;
     padding: 5px;
-    margin: 2px;
+    margin: 10px;
     border-radius: 5px;
+    border: 0.5px solid rgb(114, 190, 237);
+}
+.left-side-bar ul{
+    padding-left: 0;
+    margin: 5px;
+    text-align: center;
+    background-color: rgb(235, 239, 239);
+    border-radius: 10px;
+
 }
 .left-side-bar ul li:hover{
-    margin: 2px;
-    background: radial-gradient(circle, #820e8f 0%, #50e2ff 100%);
+    margin: 10px;
+    background: radial-gradient(circle, #fdebff 0%, #c6f2fb 100%);
 }
 .left-side-bar ul li:active{
     margin: 2px;
@@ -89,7 +98,7 @@ body{
 }
 .input button:hover{
     border: none;
-    background-color: rgb(192, 223, 251);
+    background: radial-gradient(circle, #fdebff 0%, #c6f2fb 100%);
     border-radius: 5px;
     margin: 8px;
     padding: 10px;
@@ -116,7 +125,7 @@ body{
     border: 1px solid rgb(209, 207, 207);
     padding: 10px;
     margin: 10px;
-    background-color: rgb(253, 186, 252);
+    background: radial-gradient(circle, #fdebff 0%, #c6f2fb 100%);
 }
 .timeEvents ul li:active{
     font-family: Arial, Helvetica, sans-serif;
@@ -127,13 +136,58 @@ body{
     margin: 10px;
     background-color: rgb(246, 211, 245);
 }
-.leftsidebarextra{
-    display:none;
+.hamBar{
+    display: none;
 }
 @media(max-width:600px){
 
     .left-side-bar{
-        display: none;
+        display:inline-block;
+        border: 1px solid rgb(209, 207, 207);   
+        background: radial-gradient(circle, #f19afb 0%, #9ee5f3 100%);
+        width: 150px;
+        height: 100vh;
+        color: rgb(41, 41, 41);
+        position:absolute;
+        visibility: hidden;
+        
+    }
+    .left-side-bar ul li{
+        list-style-type: none;
+        padding: 5px;
+        margin: 10px;
+        border-radius: 5px;
+        border: 0.5px solid rgb(114, 190, 237);
+        font-size: 10px;
+    
+    }
+    .left-side-bar ul{
+
+        padding: 2px;
+        margin: 5px;
+        text-align: center;
+        background-color: rgb(235, 239, 239);
+        border-radius: 10px;
+    }
+    .hamBar{
+        width: 25px;
+        height: 25px;
+        display: block;
+        background-color: rgb(235, 239, 239);
+        text-align: center;
+        color: white ;
+        border: 1px solid gainsboro;
+
+    }
+    .hamBar:hover{
+        width: 25px;
+        height: 25px;
+        display: block;
+        background-color: rgb(148, 153, 153);
+        text-align: center;
+        color: white ;
+        border: 1px solid gainsboro;
+        top:50px
     }
     .input{
         display: flex;
@@ -141,12 +195,5 @@ body{
         justify-content: space-around;
         background-color: rgb(235, 239, 239);
         margin-bottom: 10px;
-    
-    }
-    .leftsidebarextra{
-        width: 2px;
-        height: 2px;
-        border: 1px solid black;
-        background-color: #00d4ff;
-    }
-}
+        align-items: center;
+    }}  

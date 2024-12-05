@@ -6,10 +6,13 @@
     <title>HOME</title>
 </head>
 <link rel="stylesheet" href="home.css">
+<script src="home.js"></script>
 <body>
-  <div class="left-side-bar">
-  
+
+  <div class="left-side-bar" style="visibility: hidden;">
+ 
    <p>Dashboard</p>
+
       <ul>
         <li>TIME TRACKER</li>
         <li>CALENDAR</li>
@@ -28,7 +31,7 @@
 
  <div class="body">
       <div class="input">
-        <div class="leftsidebarextra">III</div>
+        <div class="hamBar" onclick="leftsidebar()">III</div>
         <input type="text"placeholder="What are you working on?" >
         <p class="addProject">project</p>
         <button>START</button>
