@@ -7,38 +7,36 @@
 </head>
 <link rel="stylesheet" href="home.css">
 <script src="home.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <body>
 
-  <div class="left-side-bar" style="visibility: hidden;">
- 
-   <p>Dashboard</p>
-
-      <ul>
-        <li>TIME TRACKER</li>
-        <li>CALENDAR</li>
-        <li>TIME SHEET</li>
-        <li>KIOSK</li>
-        <li>REPORTS</li>
-        <li>PROJECTS</li>
-        <li>EXPENSES</li>
-        <li>INVOICES</li>
-        <li>TEAM</li>
-        <li>TIME OFF</li>
-        <li>SCHEDULE</li>
-      </ul>
-      <button>Log out</button>
-  </div>
-
- <div class="body">
-      <div class="input">
-        <div class="hamBar" onclick="leftsidebar()">III</div>
-        <input type="text"placeholder="What are you working on?" >
-        <p class="addProject">project</p>
-        <button>START</button>
-      </div>
-      <div class="timeEvents">
+  <div class="left-side-bar">
+    <button id="x-bar">x</button>
+    <p>Dashboard</p>
         <ul>
+            <li>CALENDAR</li>
+            <li>TIME SHEET</li>
+            <li>TEAM</li>
+            <li>TIME OFF</li>
+            <li>SCHEDULE</li>
+        </ul>
+        <button>Log out</button>
+</div>
+
+<div class="body">
+    <div class="input">
+        <div class="hamBar">III</div>
+        <input type="text" placeholder="What are you working on?">
+        <p class="addProject">project</p>
+        <button>Like</button>
+        <button>START</button>
+    </div>
+    <div class="timeEvents">
+        <ul>
+            <div id="itemList">
             <p>Today</p>
+            <button><i class="fa-solid fa-trash-can"></i></button>
+            </div>
             <li>Emails</li>
             <li>Creating illustrations</li>
             <li>fixing bugs</li>
@@ -49,15 +47,8 @@
             <li>Creating illustrations</li>
             <li>fixing bugs</li>
         </ul>
-        <ul>
-          <p>Yesterday</p>
-          <li>Emails</li>
-          <li>Creating illustrations</li>
-          <li>fixing bugs</li>
-        </ul>
-
-      </div>
- </div>
+    </div>
+</div>
 
 </body>
 </html>

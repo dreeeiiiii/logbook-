@@ -1,8 +1,17 @@
-function leftsidebar(){
+document.addEventListener("DOMContentLoaded", function () {
     const leftSide = document.querySelector(".hamBar");
-    const left = document.querySelector(".left-side-bar");
-
-    leftSide.addEventListener('click', function(){
-        left.style.visibility = "visible";
+    const leftBar = document.querySelector(".left-side-bar");
+    const closeBar = document.getElementById("x-bar");
+ 
+  
+    // Show the sidebar
+    leftSide.addEventListener("click", function () {
+      leftBar.style.visibility = "visible";
     });
-}
+  
+    // Hide the sidebar
+    closeBar.addEventListener("click", function () {
+      leftBar.style.visibility = "hidden";
+    });
+  });
+  
