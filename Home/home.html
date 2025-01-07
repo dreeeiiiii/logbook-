@@ -6,21 +6,27 @@
     <title>HOME</title>
 </head>
 <link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="mainGraph.css">
 <script src="home.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="mainGraph.js"></script>
+
+
 <body>
 
   <div class="left-side-bar">
     <button id="x-bar">x</button>
     <p>Dashboard</p>
         <ul>
-            <li>CALENDAR</li>
-            <li>TIME SHEET</li>
-            <li>TEAM</li>
-            <li>TIME OFF</li>
-            <li>SCHEDULE</li>
+            <li onclick="Navigate(this)" data-path="../Home/calendar/main.html" id="calendar">CALENDAR</li>
+            <li onclick="Navigate(this)" data-path="../Home/timesheet/timesheet.html" id="timesheet">TIME SHEET</li>
+            <li onclick="Navigate(this)" data-path="../Home/team/team.html" id="team">TEAM</li>
+            <li onclick="Navigate(this)" data-path="../Home/timeoff/timeoff.html" id="timeOff">TIME OFF</li>
+            <li onclick="Navigate(this)" data-path="../Home/schedule/schedule.html" id="Schedule">SCHEDULE</li>
         </ul>
-        <button>Log out</button>
+        <button onclick="LogOut()" data-path="../logbook/logInpage/logInPage.html">Log out</button>
 </div>
 
 <div class="body">
@@ -31,23 +37,12 @@
         <button>Like</button>
         <button>START</button>
     </div>
-    <div class="timeEvents">
-        <ul>
-            <div id="itemList">
-            <p>Today</p>
-            <button><i class="fa-solid fa-trash-can"></i></button>
-            </div>
-            <li>Emails</li>
-            <li>Creating illustrations</li>
-            <li>fixing bugs</li>
-        </ul>
-        <ul>
-            <p>Yesterday</p>
-            <li>Emails</li>
-            <li>Creating illustrations</li>
-            <li>fixing bugs</li>
-        </ul>
+    <div id="salesChart">
+        <h2>Sales</h2>
+        <div id="chartdiv"></div>
     </div>
+    
+
 </div>
 
 </body>
